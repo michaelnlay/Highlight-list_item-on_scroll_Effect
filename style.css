@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* max-width: 1440px; */
+    /* scroll-behavior: smooth; */
+}
+
+
+
+
+/* 100% heigh view of each section */
+section {
+    height: 100vh;
+    width: 100%;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+}
+
+section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+/* Section background color */
+.first_page,
+.third_page,
+.fifth_page {
+    /* background-color: #ce2027; */
+    background-color: lightgray;
+    color: red;
+}
+
+.second_page,
+.fourth_page {
+    background-color: white;
+    color: red;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background-color: red;
+}
+
+nav .container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+nav .container ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav .container ul li a{
+    display: inline-block;
+    padding: 10px 20px;
+    color:white;
+    text-decoration: none;
+}
+
+/* Active element */
+nav .container ul li.active{
+    background-color: white;
+    /* transition: 0.5 ease background-color; */
+}
+
+nav .container ul li.active a{
+    color: red;
+}
+
+/* Applying scrolling snap effect */
+.All_section{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+/* After apply css properties for scroll snap type, overflow-y and height -> the child need scroll css properties */  */
